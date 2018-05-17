@@ -2,7 +2,6 @@ from os import path, mkdir
 from subprocess import call
 from platform import system
 
-
 import cat_service
 
 
@@ -12,6 +11,7 @@ def main():
     print(f'Found or created folder: {folder}')
     download_cats(folder)
     display_cats(folder)
+
 
 def write_header():
     print('-------------------')
