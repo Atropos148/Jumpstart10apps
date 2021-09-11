@@ -10,7 +10,10 @@ guess_int = -1
 
 while guess_int != chosen_number:
     guess_text = input('Guess the number between 0 and 100: ')
-    guess_int = int(guess_text)
+    try:
+        guess_int = int(guess_text)
+    except ValueError:
+        print("That is not a number")
 
     if guess_int < chosen_number:
         print('Your guess of {} is too LOW'.format(guess_int))
